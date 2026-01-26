@@ -1,4 +1,6 @@
-"""rain = True
+# Some changes
+"""
+rain = True
   if rain:
     print("Remember to take an umbrella.")
 else:
