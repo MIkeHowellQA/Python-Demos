@@ -1,0 +1,7 @@
+name = input("Enter your name:")
+age = input("Enter your age:")
+print (name)
+print (age)
+print (int(age)+5)
+#print (f"You name is {name}")
+#print (f"You age is {age}")

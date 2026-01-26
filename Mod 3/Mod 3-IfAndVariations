@@ -1,0 +1,102 @@
+raining=True
+
+if raining:
+    print ("It's raining")
+else:
+    print ("It isn't raining")
+
+##########################
+"""      
+rain = False
+money = False
+
+if rain:
+    if money:
+        print("Take the bus.")
+    else:
+        print("Walk but take an umbrella.")
+else:
+    if money:
+        print("Take the bus if you're feeling lazy")
+    else:
+        print("Walk, but You don't need an umbrella.")
+
+##########################
+
+my_money = 9
+
+if my_money > 10:
+    print("You have sufficient funds in your account.")
+else:
+    print("There is not enough money in your account to complete the purchase.")
+
+##########################   
+
+deposit = 15
+
+if 0 < deposit <= 100:
+
+    print(f"Thank you for the £{deposit} deposit!")
+
+else:
+
+    print("This is not a valid amount to deposit.")
+
+########################### Syntax for a conditional with logical operators
+deposit = 10
+
+password = "password"
+
+if 0 < deposit <= 100 and password == "password":
+
+    print(f"Thank you for depositing £{deposit}!")
+
+else:
+
+    print("Failed to make a deposit.")
+
+###########################
+
+deposit = 10
+
+password = "password"
+
+if not 0 < deposit <= 100 or password != "password":
+
+    print("Failed to make a deposit.")
+
+else:
+
+    print(f"Thank you for depositing £{deposit}!")
+
+########################### elif
+
+age = int(input("Enter your age: ")) 
+
+if age >= 85:   
+    print("You are above 85")
+elif age >= 50:   
+    print("You are between 50 and 85")
+elif age >= 20:   
+    print("You are between 20 and 50")
+else:    
+    print("You are below 20 years old")
+
+ ########################### Syntax for using lists in conditionals
+
+register = ["Khaled","Rob","Sally","Ash"]
+
+name = input("What is your name? ")
+
+if name in register:
+    print(f"Welcome {name}.")
+else:
+    print(f"I am sorry {name}, you are not in the list.")
+
+"""    
+
+def add(x,y):
+    return x + y
+
+print (add(20,30))
+    

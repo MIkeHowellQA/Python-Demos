@@ -1,0 +1,80 @@
+
+
+"""################## While loop
+num = 0
+while num < 5:
+    print(num)
+    num += 1
+
+################## While with break
+num = 0
+
+while num < 10:
+    print(num)
+    num = num + 1
+    if num == 3:
+        break
+
+print ("Still running your program")
+
+################## continue - causes the code to run from the "while" onwards, ignoring the remaining lines
+
+num = 0
+
+while num < 10:
+    num = num + 1
+    if num >= 0:
+        continue
+    print(num)
+
+################## nested loops
+num1 = 1
+
+while num1 <= 3:
+    num2 = 1
+    while  num2 <= 5 :
+        print(f"{num1} x {num2} is {num1*num2}.")
+        num2 = num2 + 1
+    print()
+    num1 = num1 + 1
+
+    """
+##################
+conversion_factors = {    
+    "USD": {"GBP": 0.71, "EUR": 0.83, "JPY": 109.23},   
+    "GBP": {"USD": 1.41, "EUR": 1.17, "JPY": 151.57},    
+    "EUR": {"USD": 1.21, "GBP": 0.85, "JPY": 130.59},    
+    "JPY": {"USD": 0.0092, "GBP": 0.0066, "EUR": 0.0076}}    
+
+print (conversion_factors["EUR"]["JPY"])
+""""
+## One way to implement a "menu"
+option = 1
+
+while option != 0:
+    # do the choice
+    print ("The menu")
+    option = input("Choose an option")
+
+option = 1
+
+while True:
+    print ("The menu")
+    option = int(input("Choose an option"))
+
+    if option == 0:
+        break
+    # do the choice
+
+
+num1 = 1
+
+while num1 <= 3:
+    num2 = 1
+    while  num2 <= 5 :
+        print(f"{num1} x {num2} is {num1*num2}.")
+        num2 = num2 + 1
+    print()
+
+    num1 = num1 + 1
+"""
