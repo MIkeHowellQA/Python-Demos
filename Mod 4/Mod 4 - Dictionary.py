@@ -1,5 +1,9 @@
+productRange = {"footwear":{"trainers":78.45,"boots":125.77,"sandals":10.22},
+                "sportswear":{"socks":8.99, "waterbottle":14.99, "raquet":567.76}}
+print (productRange["sportswear"]["raquet"])
+
 watches = {
-    1: {
+    1 : {
         "brand": "Rolex",
         "model": "Submariner Date",
         "movement": "Automatic",
@@ -79,7 +83,7 @@ watches = {
         "strap_type": "Rubber",
         "price_gbp": 290
     },
-    9: {
+    "hamilton": {
         "brand": "Hamilton",
         "model": "Khaki Field Mechanical",
         "movement": "Manual",
@@ -102,8 +106,8 @@ watches = {
 }
 
 # print item by id (which doesn't have to be an integer)
-print (watches[4])
-"""
+print (watches[4]["movement"])
+
 # show all casios
 casio_watches = {
     watch_id: watch
@@ -113,13 +117,11 @@ casio_watches = {
 
 print (casio_watches)
 
-# print out keys
+# print out keys (yup, the keys are returned if you try to use a single variable iterator on a dictionary)
 for key in watches:
     print (key)
 
 # Another way which can be slower for large data sets
 for watch in watches.values():   
-    if watch["brand"].lower() == "casio":
-        print (watch)
-
-"""
+    if watch["brand"].lower() == "casio present":
+        print (watch["brand"])

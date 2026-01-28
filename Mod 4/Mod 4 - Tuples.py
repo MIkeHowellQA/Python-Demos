@@ -12,7 +12,7 @@ print (marks)
 
 print (63 in marks)
 
-# unpacking
+# unpacking 
 first, *middle, last = marks
 print (middle)
 

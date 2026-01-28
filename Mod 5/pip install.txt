@@ -1,0 +1,24 @@
+PIP - Pip Installs Packages
+
+PIP usually comes installed with Python.  It is a package installer.
+It is a module.  I run it by typing:
+
+ python -m pip
+
+ However, pip often gets installed with a script wrapper that allow you to type
+ pip directly into the command line.  The wrapper then runs the above.
+
+ Different versions of the OS, installation, file search paths and all sorts can affect if pip
+ appears to be installed at all.
+
+ You can force pip to install (best run it as admin mode in windows command line to install it globally#
+ in the Python install folder, if you can):
+
+ python -m ensurepip --upgrade
+
+ Unless the pip script is in the OS's search path, you may find typing in pip doesn't work.
+ To be honest, rather use the "guaranteed" and more satisfying:
+
+ python -m pip
+
+ I say that because you can tell that pip is itself a module written in Python.

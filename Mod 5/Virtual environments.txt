@@ -1,0 +1,84 @@
+Virtual environments allow you to run your application using existing libraries of other people's/standard modules
+(code libraries) other than the version you have in your global Python module cache (formally
+known as sys.modules).  The latter, very likely,has the latest versions of the Python etc. libraries 
+you like to use becuase you are a good boy/girl and keep it up to date.  
+
+But perhaps your application, needs to use versions of the modules in the library that are older.  
+Perhaps the latest libraries, currently in your module cache, have familiar functions but whose
+parameters have changed (new parameters added between existing ones, dropped parameters), functions
+might have been removed since you wrote your code. Maybe there are quirks/presumptions made in these
+older libraries that have been "corrected". If your old app used these new libraries, strange things 
+would happen e.g. typefaces might default to the wrong ones, buttons might take on the wrong size as 
+the default settings for the feature have changed in the new libraries.
+
+Now you are stuck.  How do you run your program so that is uses different versions of code libraries to
+those in your current modue cache; even libraries your app uses that you don't want to make
+generally available to other Python code on your machine?
+
+Well, you create a virtual environment.  Despite its fancy name, think of it as a set of folders,
+into which you place your application's source plus the versions of the modules it requires. 
+Before you run your app, you make Python's runtime aware that you have this virtual environment for your 
+particular app.  You can add modules to this environment by using pip adding a specific version number 
+for the download to grab.  As long as you remember to tell Python to use the environment before you start the
+pip download.
+
+Go to the root folder where you app is going to be created (or exists) and type:
+
+python -m venv .venv
+
+When its done, you can go into the Scripts folder.
+To activate your venv (so if you run your app, it uses the modules in the venv, if you install Packages
+they specifically go into your venv), type:
+
+.venv/scripts/activate for Linux/MacOS
+.venv\scripts\activate.ps1 for powershell
+
+If you need to adjust PowerShell's permissions to allow you to run scripts type then repeat above:
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+You shoud see (.venv) appear in your command prompt's prompt.  Changes you make will now belong to the 
+virtual environment rather than the global one.
+
+Put your source code into the root folder (i.e. the .venv folder will be one of the subfolders).  A good idea
+is to create a folder called src in the root and put your code there.
+
+Now bad news, tkinter (the GUI interface) can only be installed globally i.e. the base installation of
+Python determines the version of tkinter you run.  So to try some other module:
+
+python -m pip install requests==2.28.1
+
+Create a small python file (main.py) and put this code to show the version of requests you
+are using:
+
+import requests
+print(requests.__version__)
+
+It should show 2.28.1 (as long as you have activated the venv).
+
+Now try:
+
+python -m pip install --upgrade requests
+
+And run your earlier script again.  You should get a higher version number.
+
+type
+
+deactivate
+
+Run your script to see the version of the request module.  You should see either the 
+version of your current Python's installed request (from the Python global module cache)
+install or, even more dramatically, told off because the request module wasn't installed
+in your Python cache to begin with.  
+
+This confirms the venv was working. Okay, if you aren't convinced, as you shouldn't entirely
+be (you believe anything I say don't you?), you can reactivate the venv as described above, 
+redownload a chosen version number of the request module and rerun your main.py script until you
+convince yourself you can switch module version numbers by activating/deactivating the venv until
+the cows come home).  This makes an excellent exercise in forcing you to remember which scripts to run, which folders they are in given how you will have
+how to use ./ (current folder) ../ (previous folder) etc to find your way around the file system and
+how to forcefully download modules by version number using pip.
+
+
+
+
