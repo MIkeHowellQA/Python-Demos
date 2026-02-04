@@ -8,6 +8,7 @@ def divide(x, y):
     else:
         return result
     finally:
+        # finally always runs
         print("FINALLY IS RUNNING")
 
 print (divide(10,2))

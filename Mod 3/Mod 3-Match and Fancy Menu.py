@@ -5,7 +5,7 @@ while True:
     print ("3) Find customers by spend amount")
 
     option = int(input("Enter your choice:"))
-
+  
     match option:
         case 1:
             print ("*Finding customer by id*")
@@ -13,13 +13,15 @@ while True:
             print ("*Finding customers by product purchased*")
         case 3:
             print ("*Finding customers by product purchased*")
+        case 0:
+            break
         case _:
             print ("*That isn't a valid option*")
-
+"""
 #####################
 ## Check a range of values using match.
 ## case transfers the value into a variable and "guard" checks if it is range
-
+"""
 value = 42
 
 match value:
@@ -33,7 +35,7 @@ match value:
 ###############
 ## A classic text based menu example implemented using a dictionary of tuples to store 
 ## the text for the menu items together with the function that runs the chosen item.
-"""
+
 def findCustomerbyId():
   print ("\n* Find customer by id *\n")
 
@@ -56,4 +58,4 @@ while True:
   choice = int(input("Choose an option: "))
 
   menu[choice][1]()
-"""    
+  

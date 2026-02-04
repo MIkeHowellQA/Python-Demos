@@ -27,4 +27,3 @@ results = {
 # Create a new tuple based on a condition applied to an existing tuple
 passed = tuple(m for m in marks if m >= 40)
 print (passed)
-

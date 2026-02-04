@@ -1,4 +1,5 @@
 # General error handler
+
 """
 while True:
     try:

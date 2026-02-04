@@ -1,3 +1,6 @@
+productRange = {"item1":32.99,"item2":45.99,"item3":22.99}
+# hashtables = dictionary
+
 watches = {
     1: {"brand": "Braun", "price_gbp": 56},
     2: {"brand": "Casio", "price_gbp": 85},
@@ -5,6 +8,7 @@ watches = {
     4: {"brand": "Rotary", "price_gbp": 105}
 }
 
+print (watches[10]["brand"])
 # Add an entry
 watches[11] = {
     "brand": "Timex",
@@ -15,7 +19,7 @@ watches[11] = {
 print (watches)
 
 # Change price
-watches[2]["price_gbp"] = 90
+#watches[2]["price_gbp"] = 90
 
 watches[2].update({
     "price_gbp": 90,

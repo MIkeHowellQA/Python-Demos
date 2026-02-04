@@ -14,7 +14,7 @@ for number in sequence:
     if number == 3:
         break
     print(number)
-"""
+
 
 """
 # Controlling loops: continue
@@ -23,7 +23,6 @@ for number in sequence:
     if number == 3:
         continue
     print(number)
-"""
 
 
     

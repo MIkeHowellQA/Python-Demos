@@ -79,6 +79,44 @@ the cows come home).  This makes an excellent exercise in forcing you to remembe
 how to use ./ (current folder) ../ (previous folder) etc to find your way around the file system and
 how to forcefully download modules by version number using pip.
 
+Nota Bena:
+Put a .gitignore file into the root folder of your repository to stop the venv files
+from uploading to GitHuib (there is a sample .gitignore in this repository, it is a generic .gitignore
+designed to copy with various installation configurations of Python (e.g. Anaconda) and not just
+standard Python, you can copy as it or trim it to suit.).
+If you dont, you will find yourself pushing and pulling nearly 1GB or more of files that are standard
+files you can download more quickly and without tracking from the source.
+However, that means that on a developer's machine who downloads the repo, they will need to run a few
+utilities manually to recreate their own venv:
 
+python -m venv .venv 
+and various pip install's to download the required version of modules.
 
+The above is best done by putting a setup.ps1 (powershell) and/or a setup.sh equivalent for macOS/Linux
+that downloads script that goes along the lines of this example:
 
+# scripts/setup.ps1
+python -m venv .venv
+. .venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+Here is a sample requirements.txt file the above uses that lists the modules and versions to install:
+
+# Core framework
+flask==3.0.2
+
+# Database
+psycopg2-binary==2.9.9
+
+# HTTP / APIs
+requests==2.32.3
+
+# Environment variables
+python-dotenv==1.0.1
+
+# Production server
+gunicorn==22.0.0
+
+There are several variations of achieving the above, and you will have to figure out
+correct file paths to make it work to suite your folder structure.

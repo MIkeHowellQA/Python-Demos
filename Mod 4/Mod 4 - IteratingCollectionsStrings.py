@@ -13,9 +13,15 @@ for fruit in my_fruit:
 # Apply FOR to a dictionary
 productRange = {"item1":32.99,"item2":45.99, "item3":25.99}
 
+# when you apply for to a dictionary, the loop iterates
+# through the keys
+# (be careful of example on book, price points to keys not price)
 for price in productRange:
     print(f"The price of {price} is £{productRange[price]}.")
 
+for key in productRange:
+    print(f"The price of {key} is £{productRange[key]}.")   
+    
 productRange = {"item1":32.99,"item2":45.99, "item3":25.99}
 
 for price in sorted(productRange):
