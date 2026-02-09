@@ -1,3 +1,3 @@
-import utils.temp_converters as utc
+import utils.temp_converters as tc
 
-print (utc.celsius_to_fahrenheit(10))
+print (tc.celsius_to_fahrenheit(10))
