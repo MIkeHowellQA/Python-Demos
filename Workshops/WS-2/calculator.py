@@ -56,7 +56,7 @@ while True:
         result = modulo(x, y)
 
     if op == "//":
-        result = floordivison(x, y)
+        result = floordivision(x, y)
 
     if op == "**":
         result = power(x, y)

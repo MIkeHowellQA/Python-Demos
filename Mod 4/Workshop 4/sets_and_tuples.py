@@ -32,6 +32,9 @@ try:
 except Exception as error:
     print ("You cannot change your rectangle's dimensions: " + str(error))
 
+# __init__ system variables/functions = dunder functions/variables/properties
+
+
 
 
 

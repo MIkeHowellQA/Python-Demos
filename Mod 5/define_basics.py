@@ -30,17 +30,19 @@ def netII(income, outgoings):
 
 jan = netII(1239,578) 
 print (jan, type(jan))
-#######################
 """
+#######################
+
 # using *args
-def variableArgsOne(*args):
-    print (args) # args is a ?
+"""
+def variable_args_one(*args):
+    print (args) # args is a tuple
 
     for arg in args:
         print (arg)
 
-variableArgsOne(10, "Mike Rudolfo", "Tomatoes", 12.00)        
-
+variable_args_one(10, "Mike Rudolfo", "Tomatoes", 12.00, "Garfield")        
+"""
 # using **kwargs
 def variableArgsTwo(**kwargs):
     print (kwargs) # kwargs is a ?
@@ -49,12 +51,13 @@ def variableArgsTwo(**kwargs):
         print (f"arg name={arg} value={value}")
 
 variableArgsTwo(id= 10, name = "Mike Rudolfo", item="Tomatoes", value=12.00)        
-
+"""
 # How does this vary from passing a dictionary as a 
 # parameter?
 
 
 # default args
+
 def mon_spend (spend, salary=2000):
     total = salary - spend
     return total
@@ -70,3 +73,4 @@ def capital_city (country,city="London"):
 
 capital_city(city = "Madrid", country = "Spain")
 capital_city("UK")
+"""

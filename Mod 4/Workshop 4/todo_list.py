@@ -20,6 +20,7 @@ print (list(enumerate(tasks, 400)))
 
 i=input ("Enter the task number to delete")
 completed = tasks.pop(int(i)-1)
+# off by one = -1, list is zero based
 
 print (f"The completed task is {completed}")
 
