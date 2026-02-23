@@ -47,7 +47,7 @@ def amend_student():
     print ("Amend student")
 
 def delete_student():
-    print ("Delete student")
+    print ("De0lete student")
 
     
 def display_student():
