@@ -23,3 +23,19 @@ def test_add_contact(monkeypatch):
     result = add_contact()
     expected = {"name": "Bob", "email": "bob@example.com"}
     assert result == expected
+
+### Check output
+def greet(name):
+    print (f"Hello {name}")
+
+def test_greet(monkeypatch):
+    printed = []
+
+    def fake_print(msg):
+        printed.append (msg)
+
+    monkeypatch.setattr("builtins.print", fake_print)
+
+    greet ("Juniper Bobblesnap")
+    
+    assert printed[0] == "Hello Juniper Bobblesnap", "Print capture failed"

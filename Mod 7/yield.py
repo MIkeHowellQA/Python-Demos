@@ -1,4 +1,4 @@
-"""
+
 def hifi_brands():
     yield "Sony"
     yield "Technics"
@@ -8,7 +8,7 @@ def hifi_brands():
 
 for brand in hifi_brands():
     print(brand)
-"""
+
 
 """
 ### pause and resume effect

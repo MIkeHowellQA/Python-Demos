@@ -5,7 +5,7 @@ class FactorialValueFailure(ValueError):
 
 def factorial(x):
     if x > 950 or x < 1:
-        raise FactorialValueFailure
+       raise FactorialValueFailure
     
     if x == 1:
         return x

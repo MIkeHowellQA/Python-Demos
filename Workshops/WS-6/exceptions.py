@@ -1,8 +1,9 @@
-#print (10 / 0)
+##print (10 / 0)
 
 #int("abc")
 
-#open("missing.txt")
+#datafile = open("missing.txt")
+
 
 ## Slide 2
 
@@ -30,13 +31,13 @@ except ZeroDivisionError:
 
 print ("I'm still running your code...")
 sys.exit()
-"""
+
 
 ## Slide 3
-"""
+
 try:
     age = int(input("Enter age: "))
-except ValueError:
+except Exception as ex:    
     print("Invalid input.")
 else:
     print("Age accepted.")    
@@ -44,20 +45,22 @@ finally:
     print("Input attempt finished.")
 """
 
-## Slide 3b - Finally always runs, even after a return
+## Slide 3b - Finally ALWAYS runs, even after a return
 
 """
 def divide(a,b):
     try:
         return a/b
+        # this section never runs
     finally:
+        # Finally is used to clean up after the function
         print ("The finally part runs if the function returns successfully or fails.")
 
-print (divide(10,2))
-"""
+print (divide(10,0))
+
 
 ## Slide 3c - Realistic use of finally in a function that writes to two files at the same time.
-"""
+
 def write_two_files():
     file_data = NULL
     file_log = NULL
@@ -71,14 +74,14 @@ def write_two_files():
     except Exception as ex:
         print (f"An error occured: {str(ex)}")
     finally:
-        if file_data != NULL:
+      if file_data != NULL:
             file_data.close()
-        if file_log != NULL:
+      if file_log != NULL:
+            # be careful: dont close a file that never opened
             file_log.close()
 
 write_two_files()
 """
-
 ## Slide 4
 ## Create your own custom errors
 class InvalidScore(Exception):
@@ -93,4 +96,6 @@ try:
     enter_score(120)
 except InvalidScore:
     print ("Your score is out of range")
-    
+except Exception as ex:
+    print (str(ex))
+
